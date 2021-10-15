@@ -1,0 +1,11 @@
+Write a C program to check is a given string is palindrom or not.
+
+Internally you should implement stack and queue and using both the stack and queue you should check if a given string is palindrom or not.
+
+
+Sample Input/Output:
+Input: abcdabcd
+Output: 0
+
+Input: abcddcba
+Output: 1
