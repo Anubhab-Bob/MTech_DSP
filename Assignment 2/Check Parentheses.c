@@ -7,12 +7,12 @@
  * -----------------
  *  A stack data structure with MAXSIZE capacity  
  */
-typedef struct stack
+struct stack
 {
     int data[MAXSIZE];
     int top;
-} 
-stack;
+};
+typedef struct stack stack;
 
 /* Function: createStack
  * ----------------------
@@ -30,6 +30,34 @@ stack* createStack()
     return st;
 }
 
+/* Function: isEmpty
+ * ----------------------
+ *  Checks if a given stack is empty
+ *
+ *  st: Address of the stack to check
+ *  returns: 1 if st is empty, 0 otherwise
+ */
+int isEmpty(stack *st)
+{
+    if (st->top < 0)    // Stack Underflow!
+        return 1;
+    return 0;
+}
+
+/* Function: isFull
+ * ----------------------
+ *  Checks if a given stack is full
+ *
+ *  st: Address of the stack to check
+ *  returns: 1 if st is full, 0 otherwise
+ */
+int isFull(stack *st)
+{
+    if (st->top >= (MAXSIZE - 1))   // Stack Overflow!
+        return 1;
+    return 0;
+}
+
 /* Function: push
  * ----------------------
  *  Pushes a passed value in a given stack 
@@ -41,7 +69,7 @@ stack* createStack()
  */
 int push(stack* st, int value)
 {
-    if (st->top >= (MAXSIZE - 1))   // Stack Overflow!
+    if (isFull(st))   // Stack Overflow!
         return 0;
         
     st->data[++st->top] = value;
@@ -59,7 +87,7 @@ int push(stack* st, int value)
  */
 int pop(stack* st)
 {
-    if (st->top < 0)    // Stack Underflow!
+    if (isEmpty(st))    // Stack Underflow!
         return 0;
     
     return (st->data[st->top--]);
@@ -98,4 +126,5 @@ int main()
     char input[MAXSIZE] = "";
     fgets(input, MAXSIZE, stdin);
     printf("%d", checkParentheses(input, s));
+    free(s);
 }
