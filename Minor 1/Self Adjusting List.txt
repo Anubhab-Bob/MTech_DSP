@@ -1,0 +1,21 @@
+Write a C program to implement a self adjusting list. A self-adjusting list is like a regular list, except that all insertions/deletions are performed at the front of the list. It also has a function called Find() to check if an element is present in the list or not.  When an element is accessed by a Find() function it is moved to the front of the linked list (without disturbing the relative order of other elements) so that any subsequent access to the same element will be faster.
+
+Implement the self adjusting list using linked lists which store integer elements.
+
+Also write a menu driven test program to test the functionality of the self adjusting list.
+The operations to be performed are as follows:
+1 e - insert element e to the self adjusting linked list
+2 - remove element from the front and print the data part of the node. Print "LE" if the the list is empty.
+3 e - find element e in the linked list. Print the index of the element e (before moving the element to front)
+       in the list if e is present in the list. Note that index starts from 0. print "ENF" if element is not found in the list.
+-1 - exit
+
+Note: output will be compared as it ease so avoid extra printfs and spaces. There is exactly one space after every token of the output.
+
+Example:
+Input:
+1 40 1 30 1 20 1 10 3 40 3 30 2 2 3 50 2 2 2 -1
+Output:
+3 3 30 40 ENF 10 20 LE 
+
+Note: 10 marks will be evaluated by Moodle and 5 marks for good coding practices, scalability and efficiency.

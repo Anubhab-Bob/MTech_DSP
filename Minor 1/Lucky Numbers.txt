@@ -1,0 +1,7 @@
+Take the list of integers 1, 2, 3, ….., n. From this list of integers every second number is removed to produce a new list.  From the new list every third number is removed to produce yet another list. Every forth number is removed from this list and so the process continues. The numbers that remain after this process are called the lucky numbers. Write a C program which reads a positive non-zero integer number from the user and displays all the lucky numbers for that n. You can use C array to store the elements of the list.
+
+Example:
+Input: 10
+Output: 1 3 7
+
+Note: 7 marks will be evaluated by Moodle and 3 marks for good coding practices, scalability and efficiency.
