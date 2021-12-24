@@ -1,0 +1,9 @@
+4
+There are one thousand years in a CENTURY.
+False
+DOZEN is equivalent to 20.
+False
+The past tense of FIND is FOUND.
+True
+The sun rises in the East.
+True
